@@ -24,6 +24,6 @@ io.on("connection", (socket) => {
         io.to(data.roomId).except(socket.id).emit("newMessage",data)
     })
 });
- 
+  
 httpServer.listen(PORT);    
-export default app
+export default httpServer
