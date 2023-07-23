@@ -12,6 +12,10 @@ const io = new Server(httpServer, {
     cors:{}
 });
 
+app.get("/",(req,res)=>{
+    res.send("welcome")
+})
+
 io.on("connection", (socket) => {
     socket.on("joiningReq",(data)=>{
         socket.join(data.roomId)
