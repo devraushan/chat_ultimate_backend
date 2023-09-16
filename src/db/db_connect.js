@@ -7,7 +7,7 @@ const { chatSchemaInitialiser } = require('./schema/chat_schema');
 const { messageSchemaInitialiser } = require('./schema/message_Schema');
 const {userSchemaInitialiser} = require("./schema/user_schema")
 const {chatQueryInitialiser} = require("../db/Queries/chatQueries")
-const sequelize = new Sequelize('user_bank','devraushan','Raushan2206',{
+const sequelize = new Sequelize('user_bank','devraushan','Raushan2206@',{
     dialect: 'mysql',
     host:"localhost"
 })  
