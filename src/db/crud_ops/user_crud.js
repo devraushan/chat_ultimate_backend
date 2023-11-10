@@ -9,8 +9,8 @@ const UserDao = {
     updateUser: updateUser
 }
 
-function findAll() {
-    return User.findAll();
+function findAll(options) {
+    return User.findAll(options);
 }
 
 function findByUserName(userName) {

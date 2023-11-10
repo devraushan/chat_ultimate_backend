@@ -1,15 +1,19 @@
-const { Sequelize, QueryTypes } = require('sequelize')
+const { Sequelize} = require('sequelize')
 
-const {Chat } = require("../db/schema/chat_schema")
-const { User} = require("../db/schema/user_schema")
-const UserDao = require('./crud_ops/user_crud');
+
 const { chatSchemaInitialiser } = require('./schema/chat_schema');
 const { messageSchemaInitialiser } = require('./schema/message_Schema');
 const {userSchemaInitialiser} = require("./schema/user_schema")
 const {chatQueryInitialiser} = require("../db/Queries/chatQueries")
-const sequelize = new Sequelize('user_bank','devraushan','Raushan2206@',{
+
+const HOST = process.env.DB_HOST
+const USERNAME = process.env.DB_USERNAME
+const PASSWORD = process.env.DB_PASSWORD
+const NAME = process.env.DB_NAME
+
+const sequelize = new Sequelize(NAME,USERNAME,PASSWORD,{
     dialect: 'mysql',
-    host:"localhost"
+    host:HOST
 })  
 
 const dbconnect = async ()=>{

@@ -6,6 +6,7 @@ const dotenv = require("dotenv");
 const registerChatHandler = require("./src/pipe/socketroom");
 const dbconnect = require('./src/db/db_connect');
 const { json } = require('express');
+const userBase = require("./src/searchFeature/userBase");
 
 
 dotenv.config()
@@ -18,6 +19,7 @@ app.use(express.urlencoded({extended:false}))
 
 //db connection
 dbconnect().then(() => console.log("db connected")).catch(err => console.log(err))
+userBase.updateUserBase()
 
 //express endpoints registry
 app.get("/images/:name", (req, res) => {
@@ -25,6 +27,7 @@ app.get("/images/:name", (req, res) => {
 })
 app.use("/auth",require("./src/pipe/auth"))
 app.use("/chat",require("./src/pipe/chat"))
+app.use("/search",require("./src/pipe/search"))
 
 //Socket Registry
 const io = new Server(httpServer, {
@@ -34,6 +37,7 @@ const onConnection = (socket) => {
     registerChatHandler(io, socket)
 }
 io.on("connection", onConnection);
+
 
 httpServer.listen(PORT);
 module.exports = app

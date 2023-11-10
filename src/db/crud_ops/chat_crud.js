@@ -1,9 +1,12 @@
 const {Chat} = require("../schema/chat_schema")
 const {ChatQuery} = require("../Queries/chatQueries")
-const { QueryTypes } = require("sequelize")
 
 const ChatDao = {
-    findByMember1,findByMember2,createChat
+    findByMember1,findByMember2,createChat,findChatByBothMembers
+}
+
+function findChatByBothMembers(member1,member2){
+    return Chat.findOne({ where: { member1,member2 } });
 }
 
 function createChat(chat){

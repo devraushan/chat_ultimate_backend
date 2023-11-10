@@ -1,0 +1,557 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Backend Tests",
+    "dateExported": "2023-10-09T16:26:02.528Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "2ded84e6-611d-4193-a4d1-487bb9b4c35a",
+            "name": "Auth",
+            "containerId": "",
+            "created": "2023-09-24T08:55:18.714Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "7c09b1ca-b85b-4448-8cde-9a86f3c4b8a2",
+            "name": "Chat",
+            "containerId": "",
+            "created": "2023-09-24T08:55:18.715Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "3f2a0019-bcf9-4976-affa-e2c5e8445f58",
+            "name": "SignUp",
+            "containerId": "2ded84e6-611d-4193-a4d1-487bb9b4c35a",
+            "created": "2023-09-24T08:55:18.716Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "e1332a22-0784-409c-bdd4-a75692628d2d",
+            "name": "Login",
+            "containerId": "2ded84e6-611d-4193-a4d1-487bb9b4c35a",
+            "created": "2023-09-24T08:55:18.717Z",
+            "sortNum": 40000
+        },
+        {
+            "_id": "d67760a8-0855-44e5-b009-5cef95af75d4",
+            "name": "GetProfile",
+            "containerId": "2ded84e6-611d-4193-a4d1-487bb9b4c35a",
+            "created": "2023-09-24T08:55:18.718Z",
+            "sortNum": 50000
+        },
+        {
+            "_id": "c18529ef-b067-4b04-b477-022566617ed8",
+            "name": "CreateChat",
+            "containerId": "7c09b1ca-b85b-4448-8cde-9a86f3c4b8a2",
+            "created": "2023-09-24T08:55:18.719Z",
+            "sortNum": 60000
+        },
+        {
+            "_id": "f586982b-125d-4e76-b233-53685a99abb9",
+            "name": "FetchChats",
+            "containerId": "7c09b1ca-b85b-4448-8cde-9a86f3c4b8a2",
+            "created": "2023-09-24T08:55:18.720Z",
+            "sortNum": 70000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "e54d9114-6151-46b0-b250-4738b71dd41f",
+            "colId": "41f4d171-2518-494a-b0d8-47d64f98e5f8",
+            "containerId": "3f2a0019-bcf9-4976-affa-e2c5e8445f58",
+            "name": "Amit Barande",
+            "url": "localhost:5001/auth/signup",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-09-24T08:55:18.715Z",
+            "modified": "2023-09-24T09:35:22.920Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "fName",
+                        "value": "Amit"
+                    },
+                    {
+                        "name": "lName",
+                        "value": "Barande"
+                    },
+                    {
+                        "name": "userName",
+                        "value": "barande1"
+                    },
+                    {
+                        "name": "phNo",
+                        "value": "8976097865"
+                    },
+                    {
+                        "name": "email",
+                        "value": "barande@amit.com"
+                    },
+                    {
+                        "name": "password",
+                        "value": "mcmcmcmc"
+                    },
+                    {
+                        "name": "country",
+                        "value": "IN"
+                    }
+                ],
+                "files": [
+                    {
+                        "name": "profilePic",
+                        "value": "/home/raushan/Repos/chat_ultimate_backend/testpics/profile-picture.jpeg"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "f8cbb28b-b3fd-4176-abb1-fe5565efa411",
+            "colId": "41f4d171-2518-494a-b0d8-47d64f98e5f8",
+            "containerId": "3f2a0019-bcf9-4976-affa-e2c5e8445f58",
+            "name": "Doggy Don",
+            "url": "localhost:5001/auth/signup",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-09-24T13:54:58.638Z",
+            "modified": "2023-09-24T13:58:01.735Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "fName",
+                        "value": "Doggy"
+                    },
+                    {
+                        "name": "lName",
+                        "value": "Don"
+                    },
+                    {
+                        "name": "userName",
+                        "value": "superdoggy"
+                    },
+                    {
+                        "name": "phNo",
+                        "value": "8976097866"
+                    },
+                    {
+                        "name": "email",
+                        "value": "don@doggy.com"
+                    },
+                    {
+                        "name": "password",
+                        "value": "tmctmctmc"
+                    },
+                    {
+                        "name": "country",
+                        "value": "IN"
+                    }
+                ],
+                "files": [
+                    {
+                        "name": "profilePic",
+                        "value": "/home/raushan/Repos/chat_ultimate_backend/testpics/download.jpeg"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "2d7c6c02-f1cc-45bb-8ae5-465d1f9bf5f9",
+            "colId": "41f4d171-2518-494a-b0d8-47d64f98e5f8",
+            "containerId": "e1332a22-0784-409c-bdd4-a75692628d2d",
+            "name": "hiddenMan",
+            "url": "localhost:5001/auth/login",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-09-24T14:04:42.042Z",
+            "modified": "2023-10-09T15:25:50.893Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"userName\":\"hiddenMan\",\n  \"password\":\"hdhdhdhd\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "e4fc19ec-5a04-4ac7-bfb3-2e57f15fc6f0",
+            "colId": "41f4d171-2518-494a-b0d8-47d64f98e5f8",
+            "containerId": "3f2a0019-bcf9-4976-affa-e2c5e8445f58",
+            "name": "Super Billa",
+            "url": "localhost:5001/auth/signup",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-09-24T13:55:00.762Z",
+            "modified": "2023-09-24T14:01:06.322Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "fName",
+                        "value": "Super"
+                    },
+                    {
+                        "name": "lName",
+                        "value": "Billa"
+                    },
+                    {
+                        "name": "userName",
+                        "value": "billa"
+                    },
+                    {
+                        "name": "phNo",
+                        "value": "9976097865"
+                    },
+                    {
+                        "name": "email",
+                        "value": "billa@super.com"
+                    },
+                    {
+                        "name": "password",
+                        "value": "abcabcabc"
+                    },
+                    {
+                        "name": "country",
+                        "value": "IN"
+                    }
+                ],
+                "files": [
+                    {
+                        "name": "profilePic",
+                        "value": "/home/raushan/Repos/chat_ultimate_backend/testpics/Cat_November_2010-1a.jpg"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "34e076e8-ddd2-499d-b803-93c06d461509",
+            "colId": "41f4d171-2518-494a-b0d8-47d64f98e5f8",
+            "containerId": "e1332a22-0784-409c-bdd4-a75692628d2d",
+            "name": "billa",
+            "url": "localhost:5001/auth/login",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-10-09T15:25:58.452Z",
+            "modified": "2023-10-09T15:26:57.680Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"userName\":\"billa\",\n  \"password\":\"abcabcabc\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "7aa2a2b8-7f89-45e8-84dc-bcc7af260d1c",
+            "colId": "41f4d171-2518-494a-b0d8-47d64f98e5f8",
+            "containerId": "3f2a0019-bcf9-4976-affa-e2c5e8445f58",
+            "name": "Depressed Insaan",
+            "url": "localhost:5001/auth/signup",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2023-09-24T13:55:02.434Z",
+            "modified": "2023-09-24T14:03:13.457Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "fName",
+                        "value": "Depressed"
+                    },
+                    {
+                        "name": "lName",
+                        "value": "Insaan"
+                    },
+                    {
+                        "name": "userName",
+                        "value": "depressed"
+                    },
+                    {
+                        "name": "phNo",
+                        "value": "0000000000"
+                    },
+                    {
+                        "name": "email",
+                        "value": "insaan@depressed.com"
+                    },
+                    {
+                        "name": "password",
+                        "value": "dpdpdpdp"
+                    },
+                    {
+                        "name": "country",
+                        "value": "PAK"
+                    }
+                ],
+                "files": [
+                    {
+                        "name": "profilePic",
+                        "value": "/home/raushan/Repos/chat_ultimate_backend/testpics/desktop-wallpaper-97-aesthetic-best-profile-pic-for-instagram-for-boy-instagram-dp-boys.jpg"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "47c590ae-88cb-4ee0-8cdd-3f90bc600c78",
+            "colId": "41f4d171-2518-494a-b0d8-47d64f98e5f8",
+            "containerId": "e1332a22-0784-409c-bdd4-a75692628d2d",
+            "name": "depressed",
+            "url": "localhost:5001/auth/login",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2023-10-09T15:26:01.782Z",
+            "modified": "2023-10-09T15:29:49.603Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"userName\":\"depressed\",\n  \"password\":\"dpdpdpdp\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "d566c89e-4f55-4f7a-a308-e39086b25d81",
+            "colId": "41f4d171-2518-494a-b0d8-47d64f98e5f8",
+            "containerId": "e1332a22-0784-409c-bdd4-a75692628d2d",
+            "name": "superdoggy",
+            "url": "localhost:5001/auth/login",
+            "method": "POST",
+            "sortNum": 45000,
+            "created": "2023-10-09T15:26:07.896Z",
+            "modified": "2023-10-09T15:30:25.658Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"userName\":\"superdoggy\",\n  \"password\":\"tmctmctmc\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "c9e8e7f3-4773-4377-8811-5693a35513b1",
+            "colId": "41f4d171-2518-494a-b0d8-47d64f98e5f8",
+            "containerId": "3f2a0019-bcf9-4976-affa-e2c5e8445f58",
+            "name": "Hidden Body",
+            "url": "localhost:5001/auth/signup",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2023-09-24T13:55:03.925Z",
+            "modified": "2023-09-24T14:04:26.278Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "fName",
+                        "value": "Hidden"
+                    },
+                    {
+                        "name": "lName",
+                        "value": "Body"
+                    },
+                    {
+                        "name": "userName",
+                        "value": "hiddenMan"
+                    },
+                    {
+                        "name": "phNo",
+                        "value": "9999999999"
+                    },
+                    {
+                        "name": "email",
+                        "value": "body@hidden.com"
+                    },
+                    {
+                        "name": "password",
+                        "value": "hdhdhdhd"
+                    },
+                    {
+                        "name": "country",
+                        "value": "NK"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "0ae31590-7149-4937-a805-3d85b32b11ba",
+            "colId": "41f4d171-2518-494a-b0d8-47d64f98e5f8",
+            "containerId": "e1332a22-0784-409c-bdd4-a75692628d2d",
+            "name": "barande1",
+            "url": "localhost:5001/auth/login",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2023-10-09T15:26:03.378Z",
+            "modified": "2023-10-09T15:31:00.113Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"userName\":\"barande1\",\n  \"password\":\"mcmcmcmc\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "efa90d29-c19e-4a54-b654-8256ebf3ce3d",
+            "colId": "41f4d171-2518-494a-b0d8-47d64f98e5f8",
+            "containerId": "c18529ef-b067-4b04-b477-022566617ed8",
+            "name": "billa->depressed",
+            "url": "localhost:5001/chat/create",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2023-10-09T15:32:26.368Z",
+            "modified": "2023-10-09T15:52:45.125Z",
+            "headers": [
+                {
+                    "name": "auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiJ9.Mw.3U4V-Om-7EfV_kFUo6NgWSlxFlChomtGQ5bPh_8h0N8"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"targetUserId\":\"4\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "e9775709-f1df-4dbf-94b1-1dfbc922266d",
+            "colId": "41f4d171-2518-494a-b0d8-47d64f98e5f8",
+            "containerId": "c18529ef-b067-4b04-b477-022566617ed8",
+            "name": "billa->barande1",
+            "url": "localhost:5001/chat/create",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2023-10-09T15:52:52.052Z",
+            "modified": "2023-10-09T15:53:32.160Z",
+            "headers": [
+                {
+                    "name": "auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiJ9.Mw.3U4V-Om-7EfV_kFUo6NgWSlxFlChomtGQ5bPh_8h0N8"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"targetUserId\":\"1\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "0f49c85d-92e2-4784-81e8-ac9eb2f06453",
+            "colId": "41f4d171-2518-494a-b0d8-47d64f98e5f8",
+            "containerId": "f586982b-125d-4e76-b233-53685a99abb9",
+            "name": "billa",
+            "url": "localhost:5001/chat/fetchAll",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2023-10-09T15:55:09.283Z",
+            "modified": "2023-10-09T15:56:20.342Z",
+            "headers": [
+                {
+                    "name": "auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiJ9.Mw.3U4V-Om-7EfV_kFUo6NgWSlxFlChomtGQ5bPh_8h0N8"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "f68127ff-5c9e-4205-afb4-a9f908b0c32d",
+            "colId": "41f4d171-2518-494a-b0d8-47d64f98e5f8",
+            "containerId": "c18529ef-b067-4b04-b477-022566617ed8",
+            "name": "billa->hiddenMan",
+            "url": "localhost:5001/chat/create",
+            "method": "POST",
+            "sortNum": 80000,
+            "created": "2023-10-09T15:53:46.334Z",
+            "modified": "2023-10-09T15:54:52.881Z",
+            "headers": [
+                {
+                    "name": "auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiJ9.Mw.3U4V-Om-7EfV_kFUo6NgWSlxFlChomtGQ5bPh_8h0N8"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"targetUserId\":\"5\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "739fbe9e-e323-42f3-acd9-808f0e39e191",
+            "colId": "41f4d171-2518-494a-b0d8-47d64f98e5f8",
+            "containerId": "c18529ef-b067-4b04-b477-022566617ed8",
+            "name": "barande1->superdoggy",
+            "url": "localhost:5001/chat/create",
+            "method": "POST",
+            "sortNum": 90000,
+            "created": "2023-10-09T15:57:11.153Z",
+            "modified": "2023-10-09T16:00:37.970Z",
+            "headers": [
+                {
+                    "name": "auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiJ9.MQ.xcbMRgY3ohNdZw7JJ9KLurFVDKMdyjX0F5p77Nj-oY4"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"targetUserId\":\"5\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "ef53db7f-b473-46a6-af93-53d7c4d35260",
+            "colId": "41f4d171-2518-494a-b0d8-47d64f98e5f8",
+            "containerId": "c18529ef-b067-4b04-b477-022566617ed8",
+            "name": "barande1->superdoggy Copy",
+            "url": "localhost:5001/chat/create",
+            "method": "POST",
+            "sortNum": 100000,
+            "created": "2023-10-09T15:58:43.048Z",
+            "modified": "2023-10-09T15:58:43.048Z",
+            "headers": [
+                {
+                    "name": "auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiJ9.MQ.xcbMRgY3ohNdZw7JJ9KLurFVDKMdyjX0F5p77Nj-oY4"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"targetUserId\":\"2\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
