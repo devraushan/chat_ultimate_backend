@@ -19,7 +19,9 @@ app.use(express.urlencoded({extended:false}))
 
 //db connection
 dbconnect().then(() => console.log("db connected")).catch(err => console.log(err))
-userBase.updateUserBase()
+setInterval(() => {
+    userBase.updateUserBase()
+}, 60000);
 
 //express endpoints registry
 app.get("/images/:name", (req, res) => {

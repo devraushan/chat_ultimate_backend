@@ -14,7 +14,7 @@ const messageSchemaInitialiser = (sequelize)=>{
             type: DataTypes.STRING(1000)
         },
         attatchment:{
-            type: DataTypes.BLOB("medium")
+            type: DataTypes.STRING(1000)
         },
         chatId: {
             type: DataTypes.INTEGER,
@@ -33,7 +33,7 @@ const messageSchemaInitialiser = (sequelize)=>{
             }
         },
         readStatus:{
-            type: DataTypes.BOOLEAN,
+            type: DataTypes.BOOLEAN, 
             defaultValue: false,
             allowNull: false
         }

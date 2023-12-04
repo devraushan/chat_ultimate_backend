@@ -1,4 +1,6 @@
 const fs = require("fs")
+const MessageDao = require("../db/crud_ops/message_crud")
+const UserDao = require("../db/crud_ops/user_crud")
 const dotenv = require("dotenv")
 
 dotenv.config()
@@ -15,7 +17,7 @@ const saveFile = (file) => {
 
 }
 
-const chatHandler = (io,socket) => {
+const chatHandler = (io, socket) => {
     socket.on("joiningReq", (data) => {
         socket.join(data.roomId)
     })
@@ -27,11 +29,16 @@ const chatHandler = (io,socket) => {
         }
         msgObj.message = data.message
         msgObj.sender = data.sender
-        msgObj.image = filename?`http://${IP}:${PORT}/images/${filename}`:null   
+        msgObj.image = filename ? `http://${IP}:${PORT}/images/${filename}` : null
+        saveMsg(data.message, filename, data.roomId, data.sender)
         io.to(data.roomId).except(socket.id).emit("newMessage", msgObj)
-
     })
 }
 
+async function saveMsg(content, attatchment, chatId, sender) {
+    const user = await UserDao.findByUserName(sender)
+    message = { content, attatchment, chatId, sender:user.id }
+    MessageDao.create(message)
+    }
 
 module.exports = chatHandler
