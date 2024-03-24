@@ -6,9 +6,8 @@ const dotenv = require("dotenv")
 dotenv.config()
 
 
-let IP = process.env.IP
-const PORT = process.env.PORT
 
+const url = process.env.BASE_URL
 
 const saveFile = (file) => {
     const date = new Date()
@@ -29,7 +28,7 @@ const chatHandler = (io, socket) => {
         }
         msgObj.message = data.message
         msgObj.sender = data.sender
-        msgObj.image = filename ? `http://${IP}:${PORT}/images/${filename}` : null
+        msgObj.image = filename ? `${url}/images/${filename}` : null
         saveMsg(data.message, filename, data.roomId, data.sender)
         io.to(data.roomId).except(socket.id).emit("newMessage", msgObj)
     })

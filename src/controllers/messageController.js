@@ -1,7 +1,6 @@
 const MessageDao = require("../db/crud_ops/message_crud")
 
-const IP = process.env.IP
-const PORT = process.env.PORT
+const URL = process.env.BASE_URL
 
 const messageController = {
     fetchMessage
@@ -14,7 +13,7 @@ async function fetchMessage(req,res){
         const clientObj = {
             message : msg.content,
             sender : msg.userName,
-            image : msg.attatchment?`http://${IP}:${PORT}/images/${msg.attatchment}` : null
+            image : msg.attatchment?`${URL}/images/${msg.attatchment}` : null
         }
         returnMessage.push(clientObj)
     })
