@@ -13,7 +13,8 @@ async function fetchMessage(req,res){
         const clientObj = {
             message : msg.content,
             sender : msg.userName,
-            image : msg.attatchment?`${URL}/images/${msg.attatchment}` : null
+            image : msg.attatchment?`${URL}/images/${msg.attatchment}` : null,
+            sendingTime : msg.createdAt
         }
         returnMessage.push(clientObj)
     })

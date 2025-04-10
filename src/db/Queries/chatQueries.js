@@ -3,8 +3,11 @@ const { QueryTypes } = require("sequelize")
 const ChatQuery = {}
 
 const chatQueryInitialiser = (sequelize)=>{
-    ChatQuery.getChats = (queryStatement)=>{
-        return sequelize.query(queryStatement,{type: QueryTypes.SELECT})
+    ChatQuery.getChats = (queryStatement,variables)=>{
+        return sequelize.query(queryStatement,{
+            replacements:{...variables},
+            type: QueryTypes.SELECT
+        })
     }
 }
 

@@ -26,6 +26,7 @@ const chatHandler = (io, socket) => {
         if (data.file) {
             filename = saveFile(data.file)
         }
+        msgObj.sendingTime = data.sendingTime
         msgObj.message = data.message
         msgObj.sender = data.sender
         msgObj.image = filename ? `${url}/images/${filename}` : null

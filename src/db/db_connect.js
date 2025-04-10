@@ -6,15 +6,13 @@ const { messageSchemaInitialiser } = require('./schema/message_Schema');
 const {userSchemaInitialiser} = require("./schema/user_schema")
 const {chatQueryInitialiser} = require("../db/Queries/chatQueries")
 
-const HOST = process.env.DB_HOST
-const USERNAME = process.env.DB_USERNAME
-const PASSWORD = process.env.DB_PASSWORD
-const NAME = process.env.DB_NAME
+// const HOST = process.env.DB_HOST
+// const USERNAME = process.env.DB_USERNAME
+// const PASSWORD = process.env.DB_PASSWORD
+// const NAME = process.env.DB_NAME
+const {DB_CONNECTION_STRING} = process.env
 
-const sequelize = new Sequelize(NAME,USERNAME,PASSWORD,{
-    dialect: 'mysql',
-    host:HOST
-})  
+const sequelize = new Sequelize(DB_CONNECTION_STRING)  
 
 const dbconnect = async ()=>{
     sequelize.authenticate().then(()=>console.log("successfully connected")).catch((data)=>console.log(data));
