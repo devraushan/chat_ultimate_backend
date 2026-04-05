@@ -41,5 +41,4 @@ const onConnection = (socket) => {
 io.on("connection", onConnection);
 
 
-httpServer.listen(PORT);
-module.exports = app
+module.exports = httpServer
